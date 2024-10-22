@@ -56,9 +56,9 @@ hr {
     border-radius: 50%;
 }
 .banner-info-imagem img {
-    border-radius: 100%;
-    width: 160px;
-    height: 160px;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
 }
 .banner-info-links {
     display: flex;
@@ -74,7 +74,7 @@ hr {
     align-items: center;
     justify-content: flex-start;
     gap: 250px;
-    width: 570px;
+    width: 400px;
     padding: 10px;
     border: 1px solid white;
     border-radius: 10px;
