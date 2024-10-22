@@ -24,10 +24,10 @@
     width: 768px;
     height: 500px;
     margin: 0px auto;
-    display: flex;
+    padding: 0 20px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 40px;
 }
 .banner-info h1 {
@@ -37,7 +37,14 @@
     color: #fff;
     text-shadow: 0px 7px 4px #000000;
 }
-hr {
+.tarja{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 130px;
+    column-gap: 700px;
+}
+.tarja hr {
     width: 44px;
     height: 5.7px;
     background-image: linear-gradient(45deg, #ffdf00, #009c3b);
@@ -46,39 +53,49 @@ hr {
 #verificado { 
     width: 17px;
 }
-.banner-info-imagem {
+/*Estilo para Imagem do Neymar*/
+.banner-info-imagem img {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
-    background: linear-gradient(to bottom, #ffdf00, #009c3b);
-    border-radius: 50%;
+    border-radius: 100%;
+    background-image: url('../Imagens/neymar.jpg');
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
+    z-index: -1;
+    border-radius: 100%;
+    border: 1px solid yellow;
 }
-.banner-info-imagem img {
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
+.banner-info-imagem img::before {
+    content: "";
+    position: absolute;
+    width: 215px;
+    height: 215px;
+
 }
 .banner-info-links {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
-    width: 768px;
+    max-width: 768px;
+    margin-top: 40px;
 }
 .banner-info-links-secao {
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    gap: 250px;
-    width: 400px;
+    gap: 220px;
+    width: 100%;
     padding: 10px;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #0200006e;
+    font-weight: 600;
 }
 .banner-info-links-secao img {
     width: 30px;
