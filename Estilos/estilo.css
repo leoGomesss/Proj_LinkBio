@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 10px;
 }
 /*Área do Título*/
 .banner-info h1 {
