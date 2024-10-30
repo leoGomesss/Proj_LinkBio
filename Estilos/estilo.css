@@ -1,119 +1,87 @@
-/*Estilo Global*/
+@charset "UTF-8";
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Ysabeau Infant', sans-serif;
 }
-/*Secao Banner*/
-.banner {
-    display: flex;
+/*Seção Banner*/
+.secao-banner {
+    width: 100%; /*Largura da área do Banner*/
+    height: 100vh; /* Altura da área do Banner*/
+    display: flex; /* Transformando a área banner em Flex-Box*/
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
 }
-/*Área do Vídeo*/
-.banner video {
-    position: absolute;
+.secao-banner video {
+    position: absolute; 
+    /*Não tem elemento pai, será poscionado à partir do canto sup. esq. e poderá sobrepor*/
     z-index: -1;
-    width: 100%;
-    height: 770px;
-    object-fit: cover;
+    width: 100%; /*Largura da área do VÍDEO*/
+    height: 100%; /*Altura da área do VÍDEO*/
+    object-fit: cover;/*Propiedade faz o objeto se ajustar em todo contanier*/
 }
-/*Área com Links Externos*/
-.banner-info{
-    width: 768px;
-    height: 500px;
-    margin: 0px auto;
-    padding: 0 20px;
+/*Seção Info*/
+.contanier-info {
+    width: 768px;/*Largura da área do Contanier-info*/
+    padding: 0px 20px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 40px;
 }
-/*Área do Título*/
-.banner-info h1 {
-    text-align: center;
-    font-size: 2.2em;
-    font-family: 'Ysabeau Infant', sans-serif;
-    color: #fff;
-    text-shadow: 0px 7px 4px #000000;
-}
-.tarja{
+/*Estilo da Imagem/Título de Perfil*/
+.titulo {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-right: 130px;
-    column-gap: 700px;
-}
-.tarja hr {
-    width: 44px;
-    height: 5.7px;
-    background-image: linear-gradient(45deg, #ffdf00, #009c3b);
-    border-radius: 7px;
-} 
-#verificado { 
-    width: 17px;
-}
-/*Estilo para Imagem do Neymar*/
-.banner-info-imagem img {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+}
+.imagemPerfil {
     width: 200px;
     height: 200px;
-    border-radius: 100%;
+    border: 100%;
     background-image: url('../Imagens/neymar.jpg');
-    /*background-position: center;
-    background-size: cover;*/
-    background: linear-gradient(90deg, #ffdf00, #009c3b);
-    z-index: -1;
-    border-radius: 100%;
-    border: 1px solid yellow;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.banner-info-imagem img::before {
+.imagemPerfil::before {
     content: "";
     position: absolute;
     width: 215px;
     height: 215px;
-
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
+    z-index: -1;
+    border-radius: 100%;
 }
-.banner-info-links {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 768px;
-}
-.banner-info-links-secao {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 190px;
-    width: 87%;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 20px;
-    background: #0200006e;
-    font-weight: 600;
-}
-.banner-info-links-secao img {
-    width: 30px;
-    border-radius: 50%;
-}
-a {  
+.contanier-info h1 {
+    position: relative;
+    font-size: 50px;
     color: #fff;
-    font-size: 1.2em;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
+    text-shadow: 2px 6px 3px #000000;
 }
-.banner-info-links-secao:hover {
-    background: #fff;
+h1::before { /*Estilo para TARJA*/
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 5px;
+    bottom: 2px;
+    left: 5px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
 }
-a:hover {
-    color: #000000;
-    font-weight: bold;
-
+h1::after { /*Estilo para o item VERIFICADO*/
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 12px;
+    right: -20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../Imagens/verificado.png');
 }
