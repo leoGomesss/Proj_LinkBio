@@ -85,3 +85,36 @@ h1::after { /*Estilo para o item VERIFICADO*/
     background-repeat: no-repeat;
     background-image: url('../Imagens/verificado.png');
 }
+/*Estilo do contanier com os Links*/
+.contanier-links {
+    max-width: 768px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.contanier-links a {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #0200006e;
+}
+.contanier-links a p {
+    width: 90%;
+}
+.contanier-links a img {
+    width: 30px;
+}
+.contanier-links a:hover {
+    color: #000;
+    background-color: #fff;
+}
